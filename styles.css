@@ -4,11 +4,18 @@ header, #description {
 }
 
 #user-feelings{
-    background-color: #252422;
-    color: #FFFFFF;
+position: absolute;
+/* width: 1206px;
+height: 597px;
+left: 0px;
+top: 851px; */
+background: #252422;
+color: #FFFFFF;
 }
 
 footer {
-    background-color: #ccc5ba;
-    color: #000;
+position: relative;
+/* width: 1206px;
+height: 221px; */
+background: #CCC5B9;
 }
