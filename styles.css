@@ -13,17 +13,6 @@ header, #description {
     width:100%;
 }
 
-#description-header {
-    text-align: center;
-}
-
-.description-text{
-    text-align: right;
-    /* width: 435px; */
-    word-break: break-all;
-}
-
-
 .example_image{
     text-align: left;
 }
@@ -39,5 +28,3 @@ color: #FFFFFF;
 footer {
 background: #CCC5B9;
 }
-
-/* header needs to be sticky and responseive */
