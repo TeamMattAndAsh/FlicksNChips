@@ -9,6 +9,7 @@ body {
   justify-content: center;
   align-items: center;
   font-family: Fanwood Text;
+  flex-direction: column;
 }
 
 h1 {
@@ -35,62 +36,186 @@ button {
   height: 30px;
 }
 
-#info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
-#retry {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+
+#movieInfoOuter{
+    display: flex;
 }
 
-#movieInfoOuter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#movieTitleimgbox {
+    display: contents;
 }
 
-#recipeInfoOuter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#movieTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
 }
 
-#recipeInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#photoOne {
+    height: 55vh;
+    width: 50%;
+    text-align: end;
+  }
+
+  #recipeInfoOuter{
+    display: flex;
+  }
+
+#recipeTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
 }
 
-#movieInfo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#recipeTitleimgbox{
+    display: contents;
 }
 
-#info-recipe {
-  height: 100px;
+#photoTwo{
+    height: 55vh;
+    width: 50%;
+    /* text-align: end; */
 }
 
-#happyResults {
-  margin-top: 55px;
-  text-align: center;
+#generalInfo{
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    flex-direction: row-reverse;
 }
 
-#submitButton {
-  margin-top: 45px;
-  margin-bottom: 15px;
+#movieSubmit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+
+#recipeSubmit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#happyResults{
+    text-align: center;
+}
+
+
+/*<---------- MEDIA QUERY ---------> */
 @media screen and (min-width: 700px) {
   * {
-    background-color: lightgreen;
+    background-color: #252422;
     color: white;
   }
   body {
-    background-color: lightgreen;
+    display: flex;
+    background-color: #252422;
+    flex-direction: column;
   }
+
+  main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #titles{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #mainInfo{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #generalInfo{
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    height: 20vh;
+    flex-direction: row;
+  }
+
+  #photoOne {
+    height: 55vh;
+    width: 50%;
+  }
+
+  #photoTwo {
+    height: 55vh;
+    width: 50%;
+  }
+
+  #movieInfoOuter {
+    padding-top: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-bottom: 10%;
+  }
+
+  #recipeInfoOuter{
+    padding-top: 10%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 10%;
+  }
+
+
+  #movieInfo {
+    display: none;
+  }
+
+  #recipeInfo {
+   display: none;
+  }
+
+  #photoTwoOuter{
+    display: flex;
+    justify-content: end;
+  }
+
+  #retry-mobile{
+    display: none;
+  }
+
+  #info-recipe-mobile{
+    display: none;
+  }
+
+  #info-recipe-flex{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  #movieSubmit{
+    display: flex;
+    flex-direction: column;
+  }
+  #recipeSubmit{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
 }

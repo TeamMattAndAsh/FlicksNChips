@@ -16,60 +16,56 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav></nav>
-    <div class="container-md">
-      <h1>Our recommendation for when you are feeling sad:</h1>
-      <h2>We hope this makes your night better!</h2>
+    <nav>
+        <p>Nav</p>
+      </nav>
+    <main>
 
-      <div class="row" id="movieInfoOuter">
-        <div class="col-6">
-          <img id="photoOne" src="" alt="" />
+      <!-- titles section -->
+      <section id="titles">
+        <h1>Our recommendation for when you are feeling sad:</h1>
+        <h2>We hope this makes your night better!</h2>
+      </section>
+
+      <!-- results with information section -->
+      <section id="mainInfo">
+        <div id="movieInfoOuter">
+          <div id="movieTitleimgbox">
+            <p id="movieTitle">Movie Name by Director</p>
+            <img id="photoOne" src="" alt="" />
+          </div>
         </div>
 
-        <div id="movieInfo" class="col-6">
-          <p>NOPE Jordan Peele</p>
+        <div id="recipeInfoOuter">
+          <div id="recipeTitleimgbox">
+            <img id="photoTwo" src="" alt="" />
+            <p id="recipeTitle">Food Name</p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div id="recipeInfoOuter" class="row">
-        <div class="col-6" id="recipeInfo">
-          <p>Chicken Alfredo</p>
-        </div>
-        <div class="col-6">
-          <img id="photoTwo" src="" alt="" />
-        </div>
-      </div>
+      <!-- more info with retry button  -->
+      <section id="generalInfo">
 
-      <div class="row justify-content-center">
-        <div id="info" class="col-6"><p>NOPE Movie</p></div>
-        <div id="recipeTitle" class="col-6"><p>Chicken Alfredo</p></div>
-      </div>
-
-      <div class="row">
-        <div class="col-6">
+        <div id="movieSubmit">
           <ul id="info-movie">
             <li id="movieItemOne"></li>
             <li id="movieItemTwo"></li>
             <li id="movieItemThree"></li>
           </ul>
+          <button>Retry</button>
         </div>
-        <div class="col-6">
+        <div id="recipeSubmit">
           <ul id="info-recipe">
             <li id="recipeItemOne"></li>
             <li id="recipeItemTwo"></li>
             <li id="recipeItemThree"></li>
           </ul>
+          <button>Retry</button>
         </div>
-      </div>
+      </section>
 
-      <div class="row justify-content-center">
-        <div id="retry" class="col-5">
-          <button>Retry</button>
-        </div>
-        <div id="retry" class="col-5">
-          <button>Retry</button>
-        </div>
-      </div>
+      <!-- submiting final results  -->
       <section id="happyResults">
         <div class="row-md" id="retry">
           <p>Happy with your results?</p>
@@ -78,7 +74,7 @@
           <button>Submit</button>
         </div>
       </section>
-    </div>
+    </main>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
