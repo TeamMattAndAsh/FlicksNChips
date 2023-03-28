@@ -36,6 +36,10 @@ button {
   height: 30px;
 }
 
+img{
+    border-radius: 6%;
+}
+
 #titles{
     display: flex;
     justify-content: center;
@@ -60,6 +64,7 @@ button {
     align-items: center;
     width: 50%;
     justify-content: center;
+
 }
 
 #photoOne {
@@ -78,6 +83,7 @@ button {
     align-items: center;
     width: 50%;
     justify-content: center;
+
 }
 
 #recipeTitleimgbox{
@@ -86,7 +92,7 @@ button {
 
 #photoTwo{
     height: 55vh;
-    width: 50%;
+    width: 40%;
     /* text-align: end; */
 }
 
@@ -134,6 +140,14 @@ button {
     flex-direction: column;
   }
 
+  h1{
+    font-size: 40px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
   #titles{
     display: flex;
     flex-direction: column;
@@ -154,7 +168,8 @@ button {
 
   #photoOne {
     height: 55vh;
-    width: 50%;
+    width: 60%;
+    padding-right: 10px;
   }
 
   #photoTwo {
@@ -216,6 +231,28 @@ button {
     flex-direction: column;
   }
 
+
+#movieTitleimgbox{
+    vertical-align: top;
+}
+
+#movieTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    padding-top: 40%;
+}
+
+#recipeTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 40%;
+}
 
 
 }
