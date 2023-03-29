@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  background-color: #1e1e1e;
+  color: white;
+}
+nav{
+    padding: 1.3% 0%;
+    background-color: #eb5e28;
+    width: 100%;
+    height: 25%;
+}
+body {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Fanwood Text;
+  flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 15px;
+  text-align: center;
+}
+
+img {
+  width: 90%;
+  height: 35vh;
+  border-radius: 6%;
+  border-style: none;
+}
+
+button {
+  background-color: #eb5e28;
+  color: #fffcf2;
+  border-style: none;
+  font-family: Fanwood Text;
+  width: 115px;
+  height: 30px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding-right: 12%;
+  }
+
+#titles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+#happyResults {
+    padding-top: 5%;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+
+
+#movieInfoOuter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#movieTitleimgbox {
+    display: contents;
+}
+
+#movieTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#photoOne {
+    height: 55vh;
+    width: 50%;
+    text-align: end;
+    border-style: none;
+    width: 55%;
+  }
+
+  #recipeInfoOuter{
+    display: flex;
+  }
+
+#recipeTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 0%;
+}
+
+#recipeTitleimgbox{
+    display: contents;
+}
+
+#photoTwo{
+    height: 50vh;
+    width: 48%;
+    border-style: none;
+    /* text-align: end; */
+}
+
+#generalInfo{
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    padding-top: 1%;
+    flex-direction: row;
+}
+
+#movieSubmit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+#recipeSubmit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#happyResults{
+    text-align: center;
+}
+
+#recipe{
+    width: 48%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#movie{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.loader {
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #FF7A59;
+    width: 150px;
+    height: 150px;
+    animation: spinner 4s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+/*<---------- MEDIA QUERY ---------> */
+@media screen and (min-width: 800px) {
+  * {
+    background-color: #252422;
+    color: white;
+  }
+  nav{
+    padding: 1.3% 0%;
+    background-color: #eb5e28;
+    width: 100%;
+    height: 25%;
+}
+
+  body {
+    display: flex;
+    background-color: #252422;
+    flex-direction: column;
+  }
+
+  main{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  h1{
+    font-size: 40px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+
+  p{
+    font-size: 50px;
+  }
+
+  li{
+    padding-right: 1px;
+  }
+  button{
+    width: 205px;
+    height: 55px;
+  }
+
+  #titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: .5%;
+    padding-top: 6%;
+  }
+
+  #mainInfo{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #generalInfo{
+    padding-bottom: 0%;
+    display: flex;
+    justify-content: space-around;
+    height: 10vh;
+    flex-direction: row;
+  }
+
+  #photoOne {
+    height: 65vh;
+    width: 60%;
+    padding-right: 10px;
+    width: 85%;
+  }
+
+  #photoTwo {
+    height: 65vh;
+    width: 40%;
+  }
+
+  #movieInfoOuter {
+    padding-top: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row-reverse;
+    padding-bottom: 0%;
+  }
+
+
+  #recipeInfoOuter{
+    padding-top: 4%;
+    display: flex;
+    flex-direction: row-reverse;
+    /* padding-bottom: 8%; */
+    width: 60%;
+  }
+
+
+  #movieInfo {
+    display: none;
+  }
+
+  #recipeInfo {
+   display: none;
+  }
+
+  #photoTwoOuter{
+    display: flex;
+    justify-content: end;
+  }
+
+  #retry-mobile{
+    display: none;
+  }
+
+  #info-recipe-mobile{
+    display: none;
+  }
+
+  #info-recipe-flex{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  #movieSubmit{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20%;
+  }
+  #recipeSubmit{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20%;
+  }
+
+
+#movieTitleimgbox{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10%;
+}
+
+#movieTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    /* width: 50%; */
+    justify-content: center;
+    padding-top: 100%;
+    padding-bottom: 0%;
+    padding: 0px 0px 0px 0px;
+}
+
+#recipeTitle{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 0%;
+    padding-right: 2%;
+}
+
+#info-movie{
+    padding: 1px;
+}
+
+#info-recipe{
+    padding: 1px;
+    text-align: center;
+}
+
+#movie{
+    text-align: center;
+}
+
+#recipe{
+    padding-right: 0%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 12%;
+}
+#recipeTitleimgbox {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 10%;
+}
+
+
+.loader {
+    margin: auto;
+    border: 20px solid #EAF0F6;
+    border-radius: 50%;
+    border-top: 20px solid #FF7A59;
+    width: 150px;
+    height: 150px;
+    animation: spinner 4s linear infinite;
+  }
+  
+  @keyframes spinner {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+}
