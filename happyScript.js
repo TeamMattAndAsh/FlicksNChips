@@ -15,6 +15,7 @@ window.addEventListener("click", async () => {
   const movieItemOne = document.querySelector("#movieItemOne");
   const movieItemTwo = document.querySelector("#movieItemTwo");
   const movieItemThree = document.querySelector("#movieItemThree");
+  const loader = document.querySelector(`.loader`);
 
 
     const happy = [`Spicy`, `Barbaque`, `Italian`, `Mexican`, `Chinese`];
@@ -33,11 +34,13 @@ window.addEventListener("click", async () => {
     );
     let data2 = await response2.json();
     console.log(data2);
+    loader.textContent = ""
     // infoRecipeBottom.innerText = `${data2.title}, ${data2.cuisines[0]}, ready in ${data2.readyInMinutes}`;
     recipeTitle.innerText = data2.title;
     recipeItemOne.innerText = data2.title;
     recipeItemTwo.innerText = data2.cuisines[Math.floor(Math.random() * 8)];
     recipeItemThree.innerText = `ready in ${data2.readyInMinutes}`;
+    
 
     let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
     let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];

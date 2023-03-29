@@ -16,11 +16,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav>
-        <p>Nav</p>
-      </nav>
+    <nav>Nav</nav>
     <main>
-
       <!-- titles section -->
       <section id="titles">
         <h1>Our recommendation for when you are feeling sad:</h1>
@@ -31,37 +28,56 @@
       <section id="mainInfo">
         <div id="movieInfoOuter">
           <div id="movieTitleimgbox">
-            <p id="movieTitle">Movie Name by Director</p>
-            <img id="photoOne" src="" alt="" />
+            <div id="movie">
+              <p id="movieTitle"></p>
+              <ul id="info-movie">
+                <li id="movieItemOne"></li>
+                <li id="movieItemTwo"></li>
+                <li id="movieItemThree"><a href=""></a></li>
+              </ul>
+              </div>
+            </div>
+
+            <img id="photoOne" />
           </div>
         </div>
+        <div class="loader"></div>
 
         <div id="recipeInfoOuter">
           <div id="recipeTitleimgbox">
-            <img id="photoTwo" src="" alt="" />
-            <p id="recipeTitle">Food Name</p>
+            <img id="photoTwo"/>
+            <div id="recipe">
+            <p id="recipeTitle"></p>
+            <ul id="info-recipe">
+              <li id="recipeItemOne"></li>
+              <li id="recipeItemTwo"></li>
+              <li id="recipeItemThree"></li>
+            </ul>
+          </div>
+
           </div>
         </div>
       </section>
 
       <!-- more info with retry button  -->
       <section id="generalInfo">
-
         <div id="movieSubmit">
+          <button>Retry</button>
           <ul id="info-movie">
             <li id="movieItemOne"></li>
             <li id="movieItemTwo"></li>
             <li id="movieItemThree"></li>
           </ul>
-          <button>Retry</button>
+          
         </div>
         <div id="recipeSubmit">
+          <button>Retry</button>
           <ul id="info-recipe">
             <li id="recipeItemOne"></li>
             <li id="recipeItemTwo"></li>
             <li id="recipeItemThree"></li>
           </ul>
-          <button>Retry</button>
+          
         </div>
       </section>
 
