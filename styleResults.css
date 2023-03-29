@@ -56,6 +56,10 @@ ul {
     padding-right: 12%;
   }
 
+  .navbar{
+    height: 5%
+  }
+
 #titles{
     display: flex;
     justify-content: center;
@@ -192,7 +196,7 @@ ul {
     padding: 1.3% 0%;
     background-color: #eb5e28;
     width: 100%;
-    height: 25%;
+    height: 5%;
 }
 
   body {
@@ -225,6 +229,10 @@ ul {
   button{
     width: 205px;
     height: 55px;
+  }
+
+  #navBar{
+    height: 1%;
   }
 
   #titles{

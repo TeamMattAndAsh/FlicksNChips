@@ -17,7 +17,7 @@ window.addEventListener("DOMContentLoaded", async () => {
   const movieItemThree = document.querySelector("#movieItemThree");
   const loader = document.querySelector(`.loader`);
   const a = document.querySelector(`a`);
-  const link = document.createElement("a");
+  const link = document.createElement('a');
   const target = document.querySelector("target");
 
   const sad = [
@@ -54,9 +54,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   recipeItemTwo.innerText = `ready in ${data2.readyInMinutes}`;
   link.setAttribute("href", `${data2.spoonacularSourceUrl}`);
   link.setAttribute("target", "_blank");
-  link.textContent = `click here for recipe!`;
-  recipeItemThree.appendChild(link);
+  link.textContent = `click here for recipe!`
+  recipeItemThree.appendChild(link)
 
+  
   loader.innerHTML = "";
 
   let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
@@ -75,28 +76,56 @@ window.addEventListener("DOMContentLoaded", async () => {
   movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
   photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
 });
+retryMovie.addEventListener("click", async () => {
+  // e.preventDefault();
+  // movieInfoOuter.innerHTML = "";
+  
+  let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
+  let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];
+  let happyMoviesRand =
+    happyMovies[Math.floor(Math.random() * happyMovies.length)];
+  const movieResponse = await fetch(
+    `https://api.themoviedb.org/3/list/${happyMoviesRand}?api_key=${keys.movieKey}&language=en-US&include_adult=false`
+  );
+  const movRand = Math.floor(Math.random() * 10);
+  const movieData = await movieResponse.json();
+  loader.innerHTML = "";
+  movieTitle.innerText = movieData.items[movRand].original_title;
+  movieItemOne.innerText = movieData.items[movRand].original_title;
+  movieItemTwo.innerText = `Was released: ${movieData.items[movRand].release_date}`;
+  movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
+  photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
+});
 
-//https://api.themoviedb.org/3/list/{list_id}?api_key=<<api_key>>&language=en-US
-// h1.innerText = data2.title;
-// h1.style.color = "#fffcf2";
-// h3.innerHTML = `${data2.summary}`;
-// h3.style.color = "#fffcf2";
-// img.src = data2.results[0].urls.regular;
-// img.src = data2.results[0].urls.regular;
+retryRecipe.addEventListener("click", async ()=>{
+  const sad = [`Spicy`, `Barbaque`, `Italian`, `Mexican`, `Chinese`];
+  let sadRand = sad[Math.floor(Math.random() * sad.length)];
+  const recRand = Math.floor(Math.random() * 9);
+  let response = await fetch(
+    `https://api.spoonacular.com/recipes/complexSearch?apiKey=${keys.recipeKey}&query=${sadRand}`
+  );
+  let data = await response.json();
+  console.log(data);
+  const recipeID = data.results[recRand].id;
+  recipeTitle.innerText = data.results[recRand].title;
+  photoTwo.src = data.results[recRand].image;
 
-// var response3 = await fetch(
-//   `https://api.pexels.com/v1/search?query=${data2.title}`,
-//   {
-//     method: "GET",
-//     headers: {
-//       Authorization: `h8ihcSnaIEH4MUPNzgxnfJulOlu0zwU1LrgmHaPqcIutnkVZLdE2MlBx`,
-//     },
-//   },)
+  let response2 = await fetch(
+    `https://api.spoonacular.com/recipes/${recipeID}/information?apiKey=${keys.recipeKey}`
+  );
 
-//   let data3 = await response3.json();
-//   const rand10 = Math.floor(Math.random() * 10);
-//   console.log(data3);
-//   console.log(data3.photos[0].src.medium);
-//   // photoOne.src = data3.photos[0].src.original;
-//   photoTwo.src = data3.photos[movRand].src.original;
-// );
+  let data2 = await response2.json();
+  loader.style.display = "none";
+  console.log(data2);
+
+  // infoRecipeBottom.innerText = `${data2.title}, ${data2.cuisines[0]}, ready in ${data2.readyInMinutes}`;
+  recipeTitle.innerText = data2.title;
+  // recipeItemOne.innerText = data2.title;
+  recipeItemTwo.innerText = `ready in ${data2.readyInMinutes}`;
+  link.setAttribute("href", `${data2.spoonacularSourceUrl}`);
+  link.setAttribute("target", "_blank");
+  link.textContent = `click here for recipe!`;
+  recipeItemThree.appendChild(link);
+
+
+})
