@@ -1,25 +1,27 @@
-window.addEventListener("DOMContentLoaded", async () => {
-  const h1 = document.querySelector("h1");
-  const img = document.querySelector("img");
-  const h3 = document.querySelector("h3");
-  const photoOne = document.querySelector("#photoOne");
-  const photoTwo = document.querySelector("#photoTwo");
-  const info = document.querySelector("#info");
-  const recipeInfo = document.querySelector("#recipeInfo");
-  const infoRecipeBottom = document.querySelector("#info-recipe");
-  const recipeItemOne = document.querySelector("#recipeItemOne");
-  const recipeItemTwo = document.querySelector("#recipeItemTwo");
-  const recipeItemThree = document.querySelector("#recipeItemThree");
-  const ul = document.querySelector("ul");
-  const recipeTitle = document.querySelector("#recipeTitle");
-  const movieItemOne = document.querySelector("#movieItemOne");
-  const movieItemTwo = document.querySelector("#movieItemTwo");
-  const movieItemThree = document.querySelector("#movieItemThree");
-  const loader = document.querySelector(`.loader`);
-  const a = document.querySelector(`a`);
-  const link = document.createElement('a');
-  const target = document.querySelector("target");
+const h1 = document.querySelector("h1");
+const img = document.querySelector("img");
+const h3 = document.querySelector("h3");
+const photoOne = document.querySelector("#photoOne");
+const photoTwo = document.querySelector("#photoTwo");
+const info = document.querySelector("#info");
+const recipeInfo = document.querySelector("#recipeInfo");
+const infoRecipeBottom = document.querySelector("#info-recipe");
+const recipeItemOne = document.querySelector("#recipeItemOne");
+const recipeItemTwo = document.querySelector("#recipeItemTwo");
+const recipeItemThree = document.querySelector("#recipeItemThree");
+const ul = document.querySelector("ul");
+const recipeTitle = document.querySelector("#recipeTitle");
+const movieItemOne = document.querySelector("#movieItemOne");
+const movieItemTwo = document.querySelector("#movieItemTwo");
+const movieItemThree = document.querySelector("#movieItemThree");
+const loader = document.querySelector(`.loader`);
+const a = document.querySelector(`a`);
+const link = document.createElement('a');
+const target = document.querySelector("target");
+const retryMovie = document.querySelector(`#retryMovie`);
+const retryRecipe = document.querySelector(`#retryRecipe`)
 
+window.addEventListener("DOMContentLoaded", async () => {
   const sad = [
     `italian`,
     `soup`,
@@ -76,10 +78,10 @@ window.addEventListener("DOMContentLoaded", async () => {
   movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
   photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
 });
+
 retryMovie.addEventListener("click", async () => {
   // e.preventDefault();
   // movieInfoOuter.innerHTML = "";
-  
   let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
   let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];
   let happyMoviesRand =
