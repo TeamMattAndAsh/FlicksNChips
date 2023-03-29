@@ -20,15 +20,6 @@ div:not(#nav-element) {
 	text-align: center;
 	background-color: #403d39;
 }
-.box {
-	background-color: #403d39;
-	/* color: #FFFCF2; */
-	border: 1px solid blue;
-	min-height: 50px;
-	text-align: center;
-	height: 100%;
-	width: 100%;
-}
 
 h3 {
 	text-align: left;
@@ -74,9 +65,6 @@ div#user_feelings.row {
 }
 
 #button-section {
-	/* width:100%;
-    height:100%; */
-	/* margin:1em; */
 	background-color: #252422;
 }
 
@@ -143,7 +131,6 @@ footer h6:after {
 	color: #252422;
 	font-size: 22px;
 	padding: 10px 15px;
-	/* background: #ccc5b9; */
 }
 footer ul li {
 	list-style: none;
