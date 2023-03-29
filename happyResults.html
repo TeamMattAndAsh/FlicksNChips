@@ -16,52 +16,99 @@
     <link rel="stylesheet" href="styleResults.css" />
   </head>
   <body>
-    <nav>
-        <p>Nav</p>
-      </nav>
+    <nav class="navbar navbar-expand sticky-top p-0">
+      <div class="container-fluid" id="nav-element">
+        <a class="navbar-brand" href="#" id="nav-title">
+          <img
+            src="/FlicksNChips/Images/app_icon.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-bottom"
+          />
+          Movies & Meals
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#description" class="nav-link">Description</a>
+          </li>
+          <li class="nav-item">
+            <a href="/FlicksNChips/developers.html" class="nav-link">
+              Developers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#user_feelings" class="nav-link">Get Started</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <button class="btn btn-primary btn-sm" id="app_button">
+            Get Started
+          </button>
+        </span>
+      </div>
+    </nav>
     <main>
-
       <!-- titles section -->
       <section id="titles">
-        <h1>Our recommendation for when you are feeling sad:</h1>
-        <h2>We hope this makes your night better!</h2>
+        <h1>Our recommendation for when you are feeling happy:</h1>
+        <h2>We hope these recommendation only add to your night!</h2>
       </section>
 
       <!-- results with information section -->
       <section id="mainInfo">
         <div id="movieInfoOuter">
           <div id="movieTitleimgbox">
-            <p id="movieTitle">Movie Name by Director</p>
-            <img id="photoOne" src="" alt="" />
+            <div id="movie">
+              <p id="movieTitle"></p>
+              <ul id="info-movie">
+                <li id="movieItemOne"></li>
+                <li id="movieItemTwo"></li>
+                <li id="movieItemThree"><a href=""></a></li>
+              </ul>
+              </div>
+            </div>
+
+            <img id="photoOne" />
           </div>
         </div>
+        <div class="loader"></div>
 
         <div id="recipeInfoOuter">
           <div id="recipeTitleimgbox">
-            <img id="photoTwo" src="" alt="" />
-            <p id="recipeTitle">Food Name</p>
+            <img id="photoTwo"/>
+            <div id="recipe">
+            <p id="recipeTitle"></p>
+            <ul id="info-recipe">
+              <li id="recipeItemOne"></li>
+              <li id="recipeItemTwo"></li>
+              <li id="recipeItemThree"></li>
+            </ul>
+          </div>
+
           </div>
         </div>
       </section>
 
       <!-- more info with retry button  -->
       <section id="generalInfo">
-
         <div id="movieSubmit">
+          <button>Retry</button>
           <ul id="info-movie">
             <li id="movieItemOne"></li>
             <li id="movieItemTwo"></li>
             <li id="movieItemThree"></li>
           </ul>
-          <button>Retry</button>
+          
         </div>
         <div id="recipeSubmit">
+          <button>Retry</button>
           <ul id="info-recipe">
             <li id="recipeItemOne"></li>
             <li id="recipeItemTwo"></li>
             <li id="recipeItemThree"></li>
           </ul>
-          <button>Retry</button>
+          
         </div>
       </section>
 

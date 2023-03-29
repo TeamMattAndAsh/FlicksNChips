@@ -1,206 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script defer src="config.js"></script>
-		<script defer src="script.js"></script>
-		<link rel="stylesheet" href="styles.css" />
-		<link
-			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
-			rel="stylesheet"
-			integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
-			crossorigin="anonymous"
-		/>
-		<script
-			defer
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
-			crossorigin="anonymous"
-		></script>
-		<link
-			href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-		/>
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-		<title>Movies & Meals</title>
-		<link
-			rel="icon"
-			type="image/x-icon"
-			href="/FlicksNChips/Images/app_icon.png"
-		/>
-	</head>
-	<body>
-		<nav class="navbar navbar-expand sticky-top p-0">
-			<div class="container-fluid" id="nav-element">
-				<a class="navbar-brand" href="#" id="nav-title">
-					<img
-						src="/FlicksNChips/Images/app_icon.png"
-						alt="Logo"
-						width="30"
-						height="30"
-						class="d-inline-block align-text-bottom"
-					/>
-					Movies & Meals
-				</a>
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a href="#description" class="nav-link">Description</a>
-					</li>
-					<li class="nav-item">
-						<a href="/FlicksNChips/developers.html" class="nav-link">
-							Developers
-						</a>
-					</li>
-					<li class="nav-item">
-						<a href="#user_feelings" class="nav-link">Get Started</a>
-					</li>
-				</ul>
-				<span class="navbar-text">
-					<button class="btn btn-primary btn-sm" id="app_button">
-						Get Started
-					</button>
-				</span>
-			</div>
-		</nav>
-		<div class="container-fluid p-0">
-			<div class="row-4">
-				<div class="col-12">
-					<header>
-						<h1 class="fs-1">Movies & Meals</h1>
-					</header>
-				</div>
-			</div>
-			<div class="row gx-0" id="midsection">
-				<div class="col-6 align-self-center">
-					<div>
-						<img src="Images/Vector.png" alt="" />
-					</div>
-				</div>
-				<div class="col-2">
-					<div id="space-div"></div>
-				</div>
-				<div class="col-4">
-					<div class="fs-5 text-wrap" id="description">
-						<h3>Why Movies and Meals?</h3>
-						We've all been through this dilemna before: You want to watch a
-						movie, but you need to eat something to really enjoy the experience.
-						The idea of choosing a movie AND a meal are way too much for you to
-						deal with right now. Life is hard, and after a long day of work you
-						want to be able to turn your mind off. Well your prayers have now
-						been answered with: Movies & Meals! Let us do the heavy lifting for
-						you. All you have to do is select your mood and based on your
-						selection we'll give you a movie and a meal to match the vibe. Don't
-						like our suggestion? Just click the button to sift through our
-						collection until you find the right one for you. Life just got a
-						little more easier.
-					</div>
-				</div>
-			</div>
-			<div class="row-cols-5">
-				<div class="col"></div>
-			</div>
-			<div class="row" id="user_feelings">
-				<div class="col" id="feeling-title">
-					<section id="title">How are you feeling today?</section>
-					<div class="row gx-0" id="button-bootstrap">
-						<div class="offset-4 col-2">
-							<section id="button-section">
-								<a
-									class="btn btn-primary btn-lg"
-									href=""
-									role="button"
-									id="app_button"
-									id="happy_button"
-								>
-									Happy
-								</a>
-							</section>
-						</div>
-						<div class="col-2">
-							<section id="button-section">
-								<a
-									class="btn btn-primary btn-lg"
-									href="recommendations.html"
-									role="button"
-									id="app_button"
-									id="sad_button"
-								>
-									Sad
-								</a>
-							</section>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer class="container-fluid bg-grey py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="logo-part">
-									<h1 id="title-footer">Movies&Meals</h1>
-									<p>Marcy Lab School, Unit 6 Project</p>
-									<p>Mathew Santos and Ashley Patterson © 2023</p>
-								</div>
-							</div>
-							<div class="col-md-6 px-4">
-								<h6>About Company</h6>
-								<p>
-									Solving the ultimate dilemma of finding the perfect food and
-									movie combination, one API at a time.
-								</p>
-								<a href="#" class="btn-footer">More Info</a>
-								<br />
-								<a href="#" class="btn-footer">Contact Us</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="row">
-							<div class="col-md-6 px-4">
-								<h6>Helpful Links</h6>
-								<div class="row">
-									<div class="col-md-6">
-										<ul>
-											<li><a href="#">Home</a></li>
-											<li><a href="#description">About</a></li>
-											<li><a href="#user-feelings">Get Started</a></li>
-										</ul>
-									</div>
-									<div class="col-md-6 px-4">
-										<ul>
-											<li><a href="#">Thank you</a></li>
-											<li><a href="#">For checking out</a></li>
-											<li><a href="#">Our Website!</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<div class="col-6">
-								<h6>Find Out More</h6>
-								<div class="social">
-									<a href="#">
-										<i class="fa fa-github" aria-hidden="true"></i>
-									</a>
-									<a href="#">
-										<i class="fa fa-instagram" aria-hidden="true"></i>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="config.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <title>Movies & Meals</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/FlicksNChips/Images/app_icon.png"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand sticky-top p-0">
+      <div class="container-fluid" id="nav-element">
+        <a class="navbar-brand" href="#" id="nav-title">
+          <img
+            src="/FlicksNChips/Images/app_icon.png"
+            alt="Logo"
+            width="30"
+            height="30"
+            class="d-inline-block align-text-bottom"
+          />
+          Movies & Meals
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#description" class="nav-link">Description</a>
+          </li>
+          <li class="nav-item">
+            <a href="/FlicksNChips/developers.html" class="nav-link">
+              Developers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#user_feelings" class="nav-link">Get Started</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <button class="btn btn-primary btn-sm" id="app_button">
+            Get Started
+          </button>
+        </span>
+      </div>
+    </nav>
+    <div class="container-fluid p-0">
+      <div class="row-4">
+        <div class="col-12">
+          <header>
+            <h1 class="fs-1">Movies & Meals</h1>
+          </header>
+        </div>
+      </div>
+      <div class="row gx-0">
+        <div class="col-6 align-self-center">
+          <div>
+            <img src="Images/Vector.png" alt="" />
+          </div>
+        </div>
+        <div class="col-2">
+          <div id="space-div"></div>
+        </div>
+        <div class="col-4">
+          <div class="fs-5 text-wrap" id="description">
+            <h3>Why Movies and Meals?</h3>
+            We've all been through this dilemna before: You want to watch a
+            movie, but you need to eat something to really enjoy the experience.
+            The idea of choosing a movie AND a meal are way too much for you to
+            deal with right now. Life is hard, and after a long day of work you
+            want to be able to turn your mind off. Well your prayers have now
+            been answered with: Movies & Meals! Let us do the heavy lifting for
+            you. All you have to do is select your mood and based on your
+            selection we'll give you a movie and a meal to match the vibe. Don't
+            like our suggestion? Just click the button to sift through our
+            collection until you find the right one for you. Life just got a
+            little more easier.
+          </div>
+        </div>
+      </div>
+      <div class="row-cols-5">
+        <div class="col"></div>
+      </div>
+      <div class="row" id="user_feelings">
+        <div class="col" id="feeling-title">
+          <section id="title">How are you feeling today?</section>
+          <div class="row gx-0" id="button-bootstrap">
+            <div class="offset-4 col-2">
+              <section id="button-section">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="happyResults.html"
+                  role="button"
+                  id="app_button"
+                  id="happy_button"
+                >
+                  Happy
+                </a>
+              </section>
+            </div>
+            <div class="col-2">
+              <section id="button-section">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="sadResults.html"
+                  role="button"
+                  id="app_button"
+                  id="sad_button"
+                >
+                  Sad
+                </a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="container-fluid bg-grey py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="logo-part">
+                  <h1 id="title-footer">Movies&Meals</h1>
+                  <p>Marcy Lab School, Unit 6 Project</p>
+                  <p>Mathew Santos and Ashley Patterson © 2023</p>
+                </div>
+              </div>
+              <div class="col-md-6 px-4">
+                <h6>About Company</h6>
+                <p>
+                  Solving the ultimate dilemma of finding the perfect food and
+                  movie combination, one API at a time.
+                </p>
+                <a href="#" class="btn-footer">More Info</a>
+                <br />
+                <a href="#" class="btn-footer">Contact Us</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-6 px-4">
+                <h6>Helpful Links</h6>
+                <div class="row">
+                  <div class="col-md-6">
+                    <ul>
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#description">About</a></li>
+                      <li><a href="#user-feelings">Get Started</a></li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6 px-4">
+                    <ul>
+                      <li><a href="#">Thank you</a></li>
+                      <li><a href="#">For checking out</a></li>
+                      <li><a href="#">Our Website!</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <h6>Find Out More</h6>
+                <div class="social">
+                  <a href="#">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                  </a>
+                  <a href="#">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
