@@ -49,17 +49,17 @@ header {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	min-height: 50px;
-	height: 100vh;
-	width: 100vw;
+	height: 100%;
+	width: 100%;
 	background-color: #403d39;
 	color: #fffcf2;
 	line-height: 85px;
 }
 
-#midsection{
+/* #midsection{
 	height:100vh;
 	width:100vw;
-}
+} */
 
 div#user_feelings.row {
 	padding-bottom: 3em;
@@ -67,8 +67,8 @@ div#user_feelings.row {
 	font-size: 25px;
 	line-height: 33px;
 	padding-top: 4em;
-	height:100vh;
-	width:100vw;
+	height:100%;
+	width:100%;
 }
 
 #button-section {
