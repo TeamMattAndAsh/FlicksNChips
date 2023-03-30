@@ -5,11 +5,13 @@ html {
 }
 
 body {
+	width: 100vw;
+	height: 100vh;
 	background-color: #403d39;
 	color: #ffffff;
 	text-align: center;
-	height: 100%;
-	width: 100%;
+	/* height: 100%;
+	width: 100%; */
 }
 
 div:not(#nav-element) {
@@ -45,7 +47,7 @@ nav {
 	padding-right: 2em;
 	margin-bottom: 1em;
 }
-header {
+/* header {
 	padding-top: 1em;
 	padding-bottom: 1em;
 	min-height: 50px;
@@ -54,6 +56,77 @@ header {
 	background-color: #403d39;
 	color: #fffcf2;
 	line-height: 85px;
+} */
+
+#graphic-section {
+	overflow-x: hidden;
+	width: 100%;
+	height: 100vh;
+	line-height: 1.7;
+	color: #eb5d29;
+	transform: skewY(-5deg);
+	background-color: #252422;
+}
+
+.bg-text-container {
+	transform: translateX(-50%);
+	left: 50%;
+	position: absolute;
+	z-index: -999;
+	bottom: 50;
+}
+
+@keyframes text-scrolling {
+	0% {
+		transform: translate3d(-100%, 0, 0);
+	}
+	100% {
+		transform: translate3d(0%, 0, 0);
+	}
+}
+
+.animate-text {
+	animation: text-scrolling 20s linear infinite;
+	will-change: transform;
+	display: block;
+	position: relative;
+	white-space: nowrap;
+}
+
+.animate-text.left {
+	animation-direction: reverse;
+}
+
+.graphic-animation {
+	font-size: 280px;
+	color: transparent;
+	-webkit-text-stroke: 2px #ba7e2f;
+	text-transform: uppercase;
+	display: inline-block;
+	line-height: 0.75;
+	min-width: auto;
+	font-weight: 800;
+}
+
+#graphic_title {
+	font-size: 90px;
+	margin: 0;
+}
+
+#graphic_text {
+	font-size: 18px;
+	font-weight: 200;
+	margin: 0;
+}
+
+.col-12 {
+	width: 45%!important;
+	position: absolute;
+	background: transparent;
+	top:50%;
+	left:50%;
+	
+	
 }
 
 /* #midsection{
@@ -67,8 +140,8 @@ div#user_feelings.row {
 	font-size: 25px;
 	line-height: 33px;
 	padding-top: 4em;
-	height:100%;
-	width:100%;
+	height: 100%;
+	width: 100%;
 }
 
 #button-section {
@@ -173,8 +246,8 @@ a.nav-link:hover {
 	color: #eb5d29;
 }
 
-#nav-title{
+#nav-title {
 	font-family: "Oswald", sans-serif;
-	color:#eb5d29
+	color: #eb5d29;
 }
 /* Credit to https://bootsnipp.com/snippets/M56El  */
