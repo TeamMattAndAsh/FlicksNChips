@@ -311,7 +311,7 @@ a.nav-link:hover {
 }
 
 /*<---------- MEDIA QUERY ---------> */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 950px) {
   * {
     background-color: #252422;
     color: white;

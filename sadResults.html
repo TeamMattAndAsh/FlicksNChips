@@ -30,26 +30,32 @@
     <link rel="stylesheet" href="styleResults.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Movies and Meals</a>
-        <button  class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon bg-light"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Description</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Developers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Get Started</a>
-            </li>
-            </li>
-          </ul>
-        </div>
+    <nav class="navbar navbar-expand sticky-top p-0">
+      <div class="container-fluid" id="nav-element">
+        <a class="navbar-brand" href="index.html" id="nav-title">
+          Movies & Meals
+        </a>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="#description" class="nav-link">Description</a>
+          </li>
+          <li class="nav-item">
+            <a href="/FlicksNChips/developers.html" class="nav-link">
+              Developers
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#user_feelings" class="nav-link">Get Started</a>
+          </li>
+          <li class="nav-item">
+            <a href="saved.html" class="nav-link">Saved</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <button class="btn btn-primary btn-sm" id="app_button">
+            Get Started
+          </button>
+        </span>
       </div>
     </nav>
     <main>
