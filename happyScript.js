@@ -11,7 +11,7 @@ const recipeItemTwo = document.querySelector("#recipeItemTwo");
 const recipeItemThree = document.querySelector("#recipeItemThree");
 const ul = document.querySelector("ul");
 const recipeTitle = document.querySelector("#recipeTitle");
-const movieInfoOuter = document.querySelector(`#movieInfoOuter`)
+const movieInfoOuter = document.querySelector(`#movieInfoOuter`);
 const movieTitle = document.querySelector("#movieTitle");
 const movieItemOne = document.querySelector("#movieItemOne");
 const movieItemTwo = document.querySelector("#movieItemTwo");
@@ -21,15 +21,16 @@ const a = document.querySelector(`a`);
 const link = document.createElement("a");
 const target = document.querySelector("target");
 const retryMovie = document.querySelector(`#retryMovie`);
-const retryRecipe = document.querySelector(`#retryRecipe`)
+const retryRecipe = document.querySelector(`#retryRecipe`);
+const submitResults = document.querySelector("#submitResults");
 
 window.addEventListener("DOMContentLoaded", async () => {
   let response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/random.php`
   );
-  
+
   let data = await response.json();
-  console.log(data)
+  console.log(data);
   console.log(data.meals[0].strMeal);
   recipeTitle.innerText = data.meals[0].strMeal;
   photoTwo.src = data.meals[0].strMealThumb;
@@ -61,47 +62,64 @@ window.addEventListener("DOMContentLoaded", async () => {
   movieItemTwo.innerText = `Was released: ${movieData.items[movRand].release_date}`;
   movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
   photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
+
+  // Local storage functionality here!
+  let count = 0;
+  submitResults.addEventListener("click", () => {
+    count++;
+    class items {
+      constructor() {
+        this.movieTitle = movieData.items[movRand].original_title;
+        this.movieImage = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
+        this.recipeTitle = data.meals[0].strMeal;
+        this.recipeImage = data.meals[0].strSource;
+      }
+    }
+    console.log(count)
+    console.log(localStorage.length)
+    localStorage.setItem(`${localStorage.length}`, JSON.stringify(new items()));
+  });
+
+
+  retryMovie.addEventListener("click", async () => {
+    // e.preventDefault();
+    // movieInfoOuter.innerHTML = "";
+
+    let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
+    let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];
+    let happyMoviesRand =
+      happyMovies[Math.floor(Math.random() * happyMovies.length)];
+    const movieResponse = await fetch(
+      `https://api.themoviedb.org/3/list/${happyMoviesRand}?api_key=${keys.movieKey}&language=en-US&include_adult=false`
+    );
+    const movRand = Math.floor(Math.random() * 10);
+    const movieData = await movieResponse.json();
+
+    movieTitle.innerText = movieData.items[movRand].original_title;
+    movieItemOne.innerText = movieData.items[movRand].original_title;
+    movieItemTwo.innerText = `Was released: ${movieData.items[movRand].release_date}`;
+    movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
+    photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
+  });
+
+  retryRecipe.addEventListener("click", async () => {
+    let response = await fetch(
+      `https://www.themealdb.com/api/json/v1/1/random.php`
+    );
+    let data = await response.json();
+    console.log(data);
+    console.log(data.meals[0].strMeal);
+    loader.style.display = "none";
+    recipeTitle.innerText = data.meals[0].strMeal;
+    photoTwo.src = data.meals[0].strMealThumb;
+
+    // infoRecipeBottom.innerText = `${data2.title}, ${data2.cuisines[0]}, ready in ${data2.readyInMinutes}`;
+    recipeTitle.innerText = data.meals[0].strMeal;
+    // recipeItemOne.innerText = data2.title;
+    recipeItemTwo.innerText = `Type: ${data.meals[0].strArea}`;
+    link.setAttribute("href", `${data.meals[0].strSource}`);
+    link.setAttribute("target", "_blank");
+    link.textContent = `click here for recipe!`;
+    recipeItemThree.appendChild(link);
+  });
 });
-
-retryMovie.addEventListener("click", async () => {
-  // e.preventDefault();
-  // movieInfoOuter.innerHTML = "";
-  
-  let sadMovies = [28, 35, 18, 14, 10749, 10770, 53];
-  let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];
-  let happyMoviesRand =
-    happyMovies[Math.floor(Math.random() * happyMovies.length)];
-  const movieResponse = await fetch(
-    `https://api.themoviedb.org/3/list/${happyMoviesRand}?api_key=${keys.movieKey}&language=en-US&include_adult=false`
-  );
-  const movRand = Math.floor(Math.random() * 10);
-  const movieData = await movieResponse.json();
-
-  movieTitle.innerText = movieData.items[movRand].original_title;
-  movieItemOne.innerText = movieData.items[movRand].original_title;
-  movieItemTwo.innerText = `Was released: ${movieData.items[movRand].release_date}`;
-  movieItemThree.innerText = `People rated this movie a ${movieData.items[movRand].vote_average} out of 10`;
-  photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
-});
-
-retryRecipe.addEventListener("click", async ()=>{
-  let response = await fetch(
-    `https://www.themealdb.com/api/json/v1/1/random.php`);
-  let data = await response.json();
-  console.log(data)
-  console.log(data.meals[0].strMeal);
-  loader.style.display = "none";
-  recipeTitle.innerText = data.meals[0].strMeal;
-  photoTwo.src = data.meals[0].strMealThumb;
-
-  // infoRecipeBottom.innerText = `${data2.title}, ${data2.cuisines[0]}, ready in ${data2.readyInMinutes}`;
-  recipeTitle.innerText = data.meals[0].strMeal;
-  // recipeItemOne.innerText = data2.title;
-  recipeItemTwo.innerText = `Type: ${data.meals[0].strArea}`;
-  link.setAttribute("href", `${data.meals[0].strSource}`);
-  link.setAttribute("target", "_blank");
-  link.textContent = `click here for recipe!`;
-  recipeItemThree.appendChild(link);
-
-
-})

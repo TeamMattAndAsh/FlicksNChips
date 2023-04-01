@@ -63,6 +63,23 @@ window.addEventListener("DOMContentLoaded", async () => {
   photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
 });
 
+let count = 0;
+submitResults.addEventListener("click", () => {
+  count++;
+  class items {
+    constructor() {
+      this.movieTitle = movieData.items[movRand].original_title;
+      this.movieImage = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
+      this.recipeTitle = data.meals[0].strMeal;
+      this.recipeImage = data.meals[0].strSource;
+    }
+  }
+  console.log(count)
+  console.log(localStorage.length)
+  localStorage.setItem(`${localStorage.length}`, JSON.stringify(new items()));
+});
+
+
 retryMovie.addEventListener("click", async () => {
   // e.preventDefault();
   // movieInfoOuter.innerHTML = "";

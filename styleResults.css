@@ -164,7 +164,7 @@ a {
 
 #photoTwo {
   height: 50vh;
-  width: 48%;
+  width: 50vw;
   border-style: none;
   /* text-align: end; */
 }
@@ -387,7 +387,7 @@ a.nav-link:hover {
 
   #photoTwo {
     height: 65vh;
-    width: 50%;
+    width: 30vw;
   }
 
   #movieInfoOuter {
@@ -461,6 +461,7 @@ a.nav-link:hover {
     padding-top: 100%;
     padding-bottom: 0%;
     padding: 0px 0px 0px 0px;
+    font-size: 34px;
   }
 
   #recipeTitle {
@@ -487,11 +488,12 @@ a.nav-link:hover {
   }
 
   #recipe {
-    padding-right: 0%;
+    padding-right: 5%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding-left: 12%;
+    width: 20vw;
   }
   #recipeTitleimgbox {
     display: flex;
@@ -581,7 +583,7 @@ a.nav-link:hover {
     color: #ccc5ba !important;
   }
 
-  a.nav-link:hover {
+  a.nav-link:hover {    
     text-decoration: none;
     color: #eb5d29;
   }
