@@ -43,9 +43,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   const movieData = await movieResponse.json();
   console.log(movieData);
   console.log(movRand);
-
-  // console.log(movieData.items[movRand]);
-  // console.log(movieData.items[movRand].original_title);
   movieTitle.innerText = movieData.items[movRand].title;
   movieItemOne.innerText = movieData.items[movRand].title;
   movieItemTwo.innerText = `Was released: ${movieData.items[movRand].release_date}`;
@@ -53,7 +50,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   photoOne.src = `https://image.tmdb.org/t/p/w500${movieData.items[movRand].poster_path}`;
 
   retryMovie.addEventListener("click", async () => {
-    // e.preventDefault();
     let sadMovies = [28, 35, 14, 53];
     let happyMovies = [12, 35, 80, 27, 10751, 9648, 878];
     let sadMoviesRand = sadMovies[Math.floor(Math.random() * sadMovies.length)];
@@ -83,9 +79,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.log(data.meals[0].strMeal);
     recipeTitle.innerText = data.meals[0].strMeal;
     photoTwo.src = data.meals[0].strMealThumb;
-    // infoRecipeBottom.innerText = `${data2.title}, ${data2.cuisines[0]}, ready in ${data2.readyInMinutes}`;
     recipeTitle.innerText = data.meals[0].strMeal;
-    // recipeItemOne.innerText = data2.title;
     recipeItemTwo.innerText = `Type: ${data.meals[0].strArea}`;
     link.setAttribute("href", `${data.meals[0].strSource}`);
     link.setAttribute("target", "_blank");
