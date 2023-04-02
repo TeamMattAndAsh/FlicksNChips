@@ -5,13 +5,11 @@ html {
 }
 
 body {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 	background-color: #403d39;
 	color: #ffffff;
 	text-align: center;
-	/* height: 100%;
-	width: 100%; */
 }
 
 div:not(#nav-element) {
@@ -141,7 +139,7 @@ div#user_feelings.row {
 	line-height: 33px;
 	padding-top: 4em;
 	height: 100%;
-	width: 100%;
+	/* width: 100%; */
 }
 
 #button-section {
@@ -161,7 +159,7 @@ div#feeling-title.col {
 }
 
 #button-bootstrap {
-	padding-top: 4em;
+	padding-top: 7em;
 	background-color: transparent !important;
 }
 
@@ -251,3 +249,16 @@ a.nav-link:hover {
 	color: #eb5d29;
 }
 /* Credit to https://bootsnipp.com/snippets/M56El  */
+
+.row.gx-0 {
+	height: 100vh;
+	width:100%
+}
+
+#user_feelings{
+	height: 100vh;
+}
+
+.row.gx-0 div {
+	background-color: transparent!important;
+}
