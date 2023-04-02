@@ -12,12 +12,14 @@ for (let  i = localStorage.length - 1; i >= 0; i--) {
 
   const card = document.createElement("div");
   card.classList.add("col");
+  card.style.border = "5px"
 
   const cardInner = document.createElement("div");
   cardInner.classList.add("card", "h-100");
 
   const cardBody = document.createElement("div");
   cardBody.classList.add("card-body");
+  
 
   const cardTitle = document.createElement("h5");
   cardTitle.classList.add("card-title");
