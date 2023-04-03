@@ -35,5 +35,8 @@ for (let  i = localStorage.length - 1; i >= 0; i--) {
   card.appendChild(cardInner);
   cardContainer.appendChild(card);
 
-
 }
+
+clearSaved.addEventListener("click", ()=>{
+  localStorage.clear();
+})
